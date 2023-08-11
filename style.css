@@ -1,0 +1,16 @@
+html {
+    font-size: 16px;
+}
+
+#skills-container > *, .fa-solid {
+    font-size: 2rem;
+    background-color: red;
+}
+
+#skills-container {
+    background-color: blue;
+}
+.adobe {
+    width: 2rem;
+}
+
