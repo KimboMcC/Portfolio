@@ -7,12 +7,15 @@
     <title>Contact</title>
     <link rel="stylesheet" href="style.css"/>
     <script src="https://kit.fontawesome.com/a37d37a64a.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <header>
-        <div id="name">
-            <h2>Kim McC</h2>
+        <div id="name" onclick="change()">
+            <h1>Kim McC</h1>
             <h4>Digital Design + Front-End</h4>
         </div>
         <nav>
@@ -31,9 +34,11 @@
                 <h3>About Me</h3>
                 <p>Howdy pardner, the names Kim. I'm a UK based designer and developer working freelance as well 
                     as half of the digital agency <a href="https://Perihelia.io"><em>Perihelia</em></a>.</p>
+                    <br>
                 <p>While I studied design at university I specialized in the digital field (UX/UI) but knew that 
                     I needed full control of the projects I worked on. Just designing wasn't enough for me so I started 
                     to learn front-end through the CodeAcademy Front-End course.</p>
+                    <br>
                 <p>In my spare time I love to get away from my computer and get outdoors. Favourite activities include 
                     rock-climbing, hiking, wild-camping, fishing & anything mountain related active and outdoors.</p>
             </article>
@@ -42,7 +47,7 @@
                 <h3>Skills/Technologies</h3>
                 <div id="skills-container">
                     <span class="fa-brands fa-html5"></span>
-                    <span class="fa-brands fa-css-alt"></span>
+                    <span class="fa-brands fa-css3-alt"></span>
                     <span class="fa-brands fa-js"></span>
                     <span class="fa-brands fa-figma"></span>
                     <span class="fa-brands fa-git"></span>
@@ -61,49 +66,58 @@
         </section>
 
         <section id="projects">
-            <section id="design">
-                <div id="design-container">
-                    <article id="KF">
-                        <button type="button" class="collapsible"><h4><a href="https://kartfest.co.uk">KartFest</a></h4></button>
-                        <p>The UK's largest arrive & drive go-karting team endurance championship. For this project 
-                            I was tasked with all matters of design (Branding, UX/UI, content-creation) and charged 
-                            with creating a website, Instagram and marketing-material that all linked together with 
-                            original cohesive branding. This project required me to use lots of the various skills 
-                            I've been collecting over time and also gave me an intro to how front-end is applied in a 
-                            large-scale project with active users.</p>
-                        <img src="./Images/KartFest.png" alt="Screenshot of KartFest.co.uk homepage">
-                    </article>
-                    <article id="Perihelia">
-                        <button type="button" class="collapsible"><h4><a href="https://perihelia.io">Perihelia</a></h4></button>
-                        <p>I am half of Perihelia. A UK based digital-agency supplying qulaity bespoke digital solutions
-                            without the unnesassary cost of a large agency. I designed the site & all accompanying branding
-                            as well as dabbling into the code to build up my experience. </p>
-                        <img src="./Images/Perihelia.png" alt="Screenshot of Perihelia.io homepage">
-                    </article>
-                </div>
-            </section>
-            <section id="dev">
-                <div id="dev-container">
-                    <article id="Kims Klimbing">
-                        <button type="button" class="collapsible"><h4>Kims Klimbing</h4></button>
-                        <p>Kims 2nd foray into dev. A CodeAcademy challenge to create a responsive site using lots of imagery and styling.</p>
-                        <img src="./Images/corp.png" alt="Screenshot of Kims Klimbing homepage">
-                    </article>
-                    <article id="Kims Korporation">
-                        <button type="button" class="collapsible"><h4>Kims Korporation</h4></button>
-                        <p>Kims 1st foray into dev. A CodeAcademy challenge to create a site using flex-box, imagery & text.</p>
-                        <img src="./Images/climbing.png" alt="Screenshot of Kims Korporation homepage">
-                    </article>
-                </div>
-            </section>
+            <h3>Projects</h3>
+            <div id="project-container">
+                <section id="design">
+                    <div id="design-container">
+                        <article id="KF">
+                            <button type="button" class="collapsible" onclick="coll(0)"><h4><a href="https://kartfest.co.uk">KartFest</a></h4><span class="fa-solid fa-caret-down"></span></button>
+                            <div class="content">
+                                <p>The UK's largest arrive & drive go-karting team endurance championship. For this project 
+                                    I was tasked with all matters of design (Branding, UX/UI, content-creation) and charged 
+                                    with creating a website, Instagram and marketing-material that all linked together with 
+                                    original cohesive branding. This project required me to use lots of the various skills 
+                                    I've been collecting over time and also gave me an intro to how front-end is applied in a 
+                                    large-scale project with active users.</p>
+                                <img src="./Images/KartFest.png" alt="Screenshot of KartFest.co.uk homepage">
+                            </div>
+                        </article>
+                        <article id="Perihelia">
+                            <button type="button" class="collapsible" onclick="coll(1)"><h4><a href="https://perihelia.io">Perihelia</a></h4><span class="fa-solid fa-caret-down"></span></button>
+                            <div class="content">
+                                <p>I am half of Perihelia. A UK based digital-agency supplying qulaity bespoke digital solutions
+                                    without the unnesassary cost of a large agency. I designed the site & all accompanying branding
+                                    as well as dabbling into the code to build up my experience. </p>
+                                <img src="./Images/Perihelia.png" alt="Screenshot of Perihelia.io homepage">
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <section id="dev">
+                    <div id="dev-container">
+                        <article id="Kims Klimbing">
+                            <button type="button" class="collapsible" onclick="coll(2)"><h4>Kims Klimbing</h4><span class="fa-solid fa-caret-down"></span></button>
+                            <div class="content">
+                                <p>Kims 2nd foray into dev. A CodeAcademy challenge to create a responsive site using lots of imagery and styling.</p>
+                                <img src="./Images/corp.png" alt="Screenshot of Kims Klimbing homepage">
+                            </div>
+                        </article>
+                        <article id="Kims Korporation">
+                            <button type="button" class="collapsible" onclick="coll(3)""><h4>Kims Korporation</h4><span class="fa-solid fa-caret-down"></span></button>
+                            <div class="content">
+                                <p>Kims 1st foray into dev. A CodeAcademy challenge to create a site using flex-box, imagery & text.</p>
+                                <img src="./Images/climbing.png" alt="Screenshot of Kims Korporation homepage">
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
         </section>
-
-    <p>Made by Kimbo. Thanks for coming.</p>
-
-    <script src="index.js"></script>
+    <div id="end">
+        <p>Made by Kimbo. Thanks for coming.</p>
+        <span class="fa-solid fa-heart"></span>
+        <script src="script.js"></script>
+    </div>
     </main>
-
-
-	
   </body>
 </html>
